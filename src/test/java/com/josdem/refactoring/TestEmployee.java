@@ -6,27 +6,28 @@ import java.math.BigDecimal;
 
 import org.junit.Test;
 
+import com.josdem.bean.EmployeeType;
+
 public class TestEmployee {
+	
+	private Employee employee = new Employee();
 	
 	@Test
 	public void shouldGetEngineerSalary() throws Exception {
 		BigDecimal salary = new BigDecimal(100.00);
-		Employee employee = new Engineer();
-		assertEquals(salary, employee.getPaymentAmount());
+		assertEquals(salary, employee.getPaymentAmount(EmployeeType.ENGINEER));
 	}
 	
 	@Test
 	public void shouldGetSalesmanSalary() throws Exception {
 		BigDecimal salary = new BigDecimal(110.00);
-		Employee employee = new Salesman();
-		assertEquals(salary, employee.getPaymentAmount());
+		assertEquals(salary, employee.getPaymentAmount(EmployeeType.SALESMAN));
 	}
 	
 	@Test
 	public void shouldGetManagerSalary() throws Exception {
 		BigDecimal salary = new BigDecimal(120.00);
-		Employee employee = new Manager();
-		assertEquals(salary, employee.getPaymentAmount());
+		assertEquals(salary, employee.getPaymentAmount(EmployeeType.MANAGER));
 	}
 
 }
