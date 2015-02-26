@@ -22,6 +22,7 @@ public class Employee {
 			default:
 				throw new RuntimeException("Incorrect Employee");
 		}
+		
 	}
 
 }
