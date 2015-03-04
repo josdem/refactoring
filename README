@@ -1,5 +1,6 @@
 ParkingLot
 -----------------------------------------
 * I must know if a parking lot is empty
+* I should park
 * I must know if a parking lot is full
 * Max capacity of parking lot is 5 cars
