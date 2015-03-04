@@ -1,7 +1,6 @@
 package com.josdem.refactoring;
 
 import java.math.BigDecimal;
-
 import com.josdem.bean.EmployeeType;
 
 public class Employee {
