@@ -29,7 +29,7 @@ public class TestParkingLot {
 	}
 
 	@Test(expected=ParkingLotOverFlowException.class)
-	public void shouldNotParkSinceIsFull() throws Exception {
+	public void shouldThrowAnExceptionSinceIsFullAndWantToPark() throws Exception {
 		fullMyParkingLot();
 		parkingLot.park();
 	}
