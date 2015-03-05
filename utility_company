@@ -1,6 +1,8 @@
 UtilityCompany
 -----------------------------------------
-* A Site is a house or apartment that use utility's services 
-* Any house has a client responsible for payment
-* Each client has a custom payment plan 
-* If a site has not a client at the moment you must apply basic payment plan
+* A Site is a house or apartment that use utility's services
+* As owner I need to know a site statement
+* If a site has not a client at the moment you must apply basic payment plan 
+* If a site has customer then apply PLUS plan 
+
+

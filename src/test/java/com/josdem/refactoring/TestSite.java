@@ -9,16 +9,17 @@ import com.josdem.refactoring.bean.PlanType;
 public class TestSite {
 	
 	@Test
-	public void shouldGetClientFromSite() throws Exception {
+	public void shouldGetBasicPlan() throws Exception {
 		Site site = new Site();
-		assertNotNull(site.getClient());
+		assertEquals(PlanType.BASIC, site.getPlan());
 	}
 	
 	@Test
-	public void shouldGetAPlan() throws Exception {
+	public void shouldGetCustomPlan() throws Exception {
 		Site site = new Site();
-		Customer customer = site.getClient();
-		assertEquals(PlanType.BASIC, customer.getPlan());
+		Customer customer = new Customer();
+		site.setCustomer(customer);
+		assertEquals(PlanType.PLUS, site.getPlan());
 	}
 
 }
