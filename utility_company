@@ -1,6 +1,5 @@
 UtilityCompany
 -----------------------------------------
-* A House or apartment that use utility's services 
+* A Site is a house or apartment that use utility's services 
 * Any house has a client responsible for payment
-* I must know if a parking lot is full
-* Max capacity of parking lot is 5 cars
+* It it common that a site is missing for a client for a while 
