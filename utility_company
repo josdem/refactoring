@@ -2,4 +2,5 @@ UtilityCompany
 -----------------------------------------
 * A Site is a house or apartment that use utility's services 
 * Any house has a client responsible for payment
-* It it common that a site is missing for a client for a while 
+* Each client has a custom payment plan 
+* If a site has not a client at the moment you must apply basic payment plan
