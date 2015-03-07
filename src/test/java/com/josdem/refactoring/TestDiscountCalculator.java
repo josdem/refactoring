@@ -1,6 +1,6 @@
 package com.josdem.refactoring;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -14,7 +14,7 @@ public class TestDiscountCalculator {
 		Integer itemPrice = 5;
 		Double expectedResult = 49.0;
 		
-		Double result = discountCalculator.getPrice(quantity, itemPrice);
+		Double result = discountCalculator.getTotal(quantity, itemPrice);
 		
 		assertEquals(expectedResult, result);
 	}
@@ -25,7 +25,7 @@ public class TestDiscountCalculator {
 		Integer itemPrice = 5;
 		Double expectedResult = 1187.5;
 		
-		Double result = discountCalculator.getPrice(quantity, itemPrice);
+		Double result = discountCalculator.getTotal(quantity, itemPrice);
 		
 		assertEquals(expectedResult, result);
 	}

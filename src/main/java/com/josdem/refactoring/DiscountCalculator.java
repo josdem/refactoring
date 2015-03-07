@@ -3,7 +3,7 @@ package com.josdem.refactoring;
 
 public class DiscountCalculator {
 	
-	Double getPrice(Integer quantity, Integer itemPrice){
+	Double getTotal(Integer quantity, Integer itemPrice){
 		Integer basePrice = quantity * itemPrice;
 		
 		Double discountFactor;
