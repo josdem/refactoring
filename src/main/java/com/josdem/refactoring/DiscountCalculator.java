@@ -1,5 +1,5 @@
 package com.josdem.refactoring;
 
-public class Beverage {
+public class DiscountCalculator {
 
 }
