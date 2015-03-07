@@ -1,5 +1,5 @@
 package com.josdem.refactoring;
 
-public class User {
+public class Beverage {
 
 }
