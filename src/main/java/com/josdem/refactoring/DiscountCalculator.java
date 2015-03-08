@@ -17,10 +17,7 @@ public class DiscountCalculator {
 	}
 	
 	private Double getDiscountFactor(){
-		if(getBasePrice() > 1000){
-			return 0.95;
-		}
-		return 0.98;
+		return (getBasePrice() > 1000) ? 0.95 : 0.98;  
 	}
 
 }
