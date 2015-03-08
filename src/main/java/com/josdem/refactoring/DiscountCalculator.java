@@ -1,9 +1,8 @@
 package com.josdem.refactoring;
 
-
 public class DiscountCalculator {
 	
-	Double getTotal(Integer quantity, Integer itemPrice){
+	public Double getTotal(Integer quantity, Integer itemPrice){
 		Integer basePrice = quantity * itemPrice;
 		
 		Double discountFactor;
