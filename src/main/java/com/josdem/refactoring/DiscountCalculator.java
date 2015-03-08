@@ -1,18 +1,26 @@
 package com.josdem.refactoring;
 
-
 public class DiscountCalculator {
-	
-	Double getTotal(Integer quantity, Integer itemPrice){
-		Integer basePrice = quantity * itemPrice;
+
+	private Integer quantity;
+	private Integer itemPrice;
+
+	public Double getTotal(Integer quantity, Integer itemPrice){
+		this.quantity = quantity;
+		this.itemPrice = itemPrice;
 		
-		Double discountFactor;
-		if(basePrice > 1000){
-			discountFactor = 0.95;
-		} else {
-			discountFactor = 0.98;
+		return getBasePrice() * getDiscountFactor();
+	}
+
+	private Integer getBasePrice() {
+		return quantity * itemPrice;
+	}
+	
+	private Double getDiscountFactor(){
+		if(getBasePrice() > 1000){
+			return 0.95;
 		}
-		return basePrice * discountFactor;
+		return 0.98;
 	}
 
 }
