@@ -11,6 +11,7 @@ public class TestAccount {
 
 	private Account account = new Account();
 	private List<Entry> entries = new ArrayList<Entry>();
+	private Range range = new Range(0, 10);
 	
 	@Test
 	public void shouldGetMeasureFromEntry() throws Exception {
@@ -18,7 +19,7 @@ public class TestAccount {
 		
 		entries.add(new Entry(5, 100.25));
 		
-		assertEquals(expectedResult, account.getTotal(0, 10, entries));
+		assertEquals(expectedResult, account.getTotal(range, entries));
 	}
 	
 	@Test
@@ -28,7 +29,7 @@ public class TestAccount {
 		entries.add(new Entry(5, 100.25));
 		entries.add(new Entry(2, 50.00));
 		
-		assertEquals(expectedResult, account.getTotal(0, 10, entries));
+		assertEquals(expectedResult, account.getTotal(range, entries));
 	}
 	
 	@Test
@@ -37,7 +38,7 @@ public class TestAccount {
 		
 		entries.add(new Entry(11, 100.25));
 		
-		assertEquals(expectedResult, account.getTotal(0, 10, entries));
+		assertEquals(expectedResult, account.getTotal(range, entries));
 	}
 
 }
