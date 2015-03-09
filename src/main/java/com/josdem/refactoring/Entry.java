@@ -2,8 +2,8 @@ package com.josdem.refactoring;
 
 public class Entry {
 
-	private Integer measure;
-	private Double value;
+	private final Integer measure;
+	private final Double value;
 
 	public Entry(Integer measure, Double value) {
 		this.measure = measure;
