@@ -1,8 +1,6 @@
 package com.josdem.refactoring;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
 
@@ -21,17 +19,17 @@ public class TestTransactionApplier {
 		
 		User user = setUserExpectations();
 		
-		assertTrue(transactionApplier.subtractAmount(user, amount));
+		transactionApplier.subtractAmount(user, amount);
 		assertEquals(expectedBalance, user.getBalance());
 	}
 	
-	@Test
+	@Test (expected=BusinessException.class)
 	public void shouldNotSubtractAmountDueToNotSufficientFunds() throws Exception {
 		BigDecimal amount = new BigDecimal(200);
-
 		User user = setUserExpectations();
 		
-		assertFalse(transactionApplier.subtractAmount(user, amount));
+		transactionApplier.subtractAmount(user, amount);
+		
 		assertEquals(userBalance, user.getBalance());
 	}
 

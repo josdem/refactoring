@@ -6,12 +6,11 @@ public class TransactionApplier {
 
 	private AmountValidator amountValidator = new AmountValidator();
 
-	public Boolean subtractAmount(User user, BigDecimal amount) {
-		if(amountValidator.hasFunds(user, amount)){
-			user.setBalance(user.getBalance().subtract(amount));
-			return true;
+	public void subtractAmount(User user, BigDecimal amount) {
+		if(!amountValidator.hasFunds(user, amount)){
+			throw new BusinessException();
 		}
-		return false;
+		user.setBalance(user.getBalance().subtract(amount));
 	}
 
 }
