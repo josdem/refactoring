@@ -4,8 +4,10 @@ import java.math.BigDecimal;
 
 public class AmountValidator {
 
-	public Boolean hasFunds(User user, BigDecimal amount) {
-		return user.getBalance().compareTo(amount) >= 0;
+	public void hasFunds(User user, BigDecimal amount) {
+		if(user.getBalance().compareTo(amount) < 0){
+			throw new BusinessException();
+		}
 	}
 
 }
