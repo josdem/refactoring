@@ -8,7 +8,6 @@ public class DiscountCalculator {
 	public Double getTotal(Integer quantity, Integer itemPrice){
 		this.quantity = quantity;
 		this.itemPrice = itemPrice;
-		
 		return getBasePrice() * getDiscountFactor();
 	}
 
@@ -17,7 +16,7 @@ public class DiscountCalculator {
 	}
 	
 	private Double getDiscountFactor(){
-		return (getBasePrice() > 1000) ? 0.95 : 0.98;  
+		return getBasePrice() > 1000 ? 0.95 : 0.98;  
 	}
 
 }
