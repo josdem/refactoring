@@ -21,9 +21,9 @@ public class TestDiscountCalculator {
 	
 	@Test
 	public void shouldGetMaxDiscountFactor() throws Exception {
-		Integer quantity = 250;
-		Integer itemPrice = 5;
-		Double expectedResult = 1187.5;
+		Integer quantity = 200;
+		Integer itemPrice = 10;
+		Double expectedResult = 1900.0;
 		
 		Double result = discountCalculator.getTotal(quantity, itemPrice);
 		
