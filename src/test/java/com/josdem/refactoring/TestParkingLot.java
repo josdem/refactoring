@@ -24,19 +24,20 @@ public class TestParkingLot {
 	
 	@Test
 	public void shouldFullAParkingLot(){
-		for(int i=0; i<MAX_CAPACITY; i++){
-			parkingLot.park();
-		}
-		assertTrue(parkingLot.isFull());
+		fillAndTestParkingLot();
 	}
 
 	@Test(expected=RuntimeException.class)
 	public void shouldNotParkSinceIsFull(){
+		fillAndTestParkingLot();
+		parkingLot.park();
+	}
+
+	private void fillAndTestParkingLot(){
 		for(int i=0; i<MAX_CAPACITY; i++){
 			parkingLot.park();
 		}
 		assertTrue(parkingLot.isFull());
-		parkingLot.park();
 	}
 	
 }
