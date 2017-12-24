@@ -1,6 +1,11 @@
-ParkingLot
------------------------------------------
-* I must know if a parking lot is empty
-* I should park
-* I must know if a parking lot is full
-* Max capacity of parking lot is 5 cars
+Avoid Duplicated Code
+------------------------------------
+
+When you have the same expression in two methods of the same class. Extract Method.
+
+Acceptance Criteria:
+
+* Parking lot should be empty when starts
+* Park increments cars quantity in parking lot
+* Remove decrements cars quantity in parking lot
+* Maximum capacity parking lot is 5 cars
