@@ -15,7 +15,7 @@ public class TestTransactionApplier {
 	private BigDecimal userBalance = new BigDecimal(100);
 
 	@Test
-	public void shouldSubstractAmount() throws Exception {
+	public void shouldSubstractAmount() {
 		BigDecimal amount = new BigDecimal(20);
 		BigDecimal expectedBalance = new BigDecimal(80);
 		
@@ -26,7 +26,7 @@ public class TestTransactionApplier {
 	}
 	
 	@Test
-	public void shouldNotSubtractAmountDueToNotSufficientFunds() throws Exception {
+	public void shouldNotSubtractAmountDueToNotSufficientFunds() {
 		BigDecimal amount = new BigDecimal(200);
 
 		User user = setUserExpectations();
