@@ -9,7 +9,7 @@ public class TestDiscountCalculator {
 	private DiscountCalculator discountCalculator = new DiscountCalculator();
 
 	@Test
-	public void shouldGetMinDiscountFactor() throws Exception {
+	public void shouldGetMinDiscountFactor() {
 		Integer quantity = 10;
 		Integer itemPrice = 5;
 		Double expectedResult = 49.0;
@@ -20,7 +20,7 @@ public class TestDiscountCalculator {
 	}
 	
 	@Test
-	public void shouldGetMaxDiscountFactor() throws Exception {
+	public void shouldGetMaxDiscountFactor() {
 		Integer quantity = 200;
 		Integer itemPrice = 10;
 		Double expectedResult = 1900.0;
