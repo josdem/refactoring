@@ -23,7 +23,7 @@ public class TestTransactionApplier {
 		assertEquals(expectedBalance, user.getBalance());
 	}
 	
-	@Test (expected=BusinessException.class)
+	@Test (expected=RuntimeException.class)
 	public void shouldNotSubtractAmountDueToNotSufficientFunds() {
 		BigDecimal amount = new BigDecimal(200);
 		User user = setUserExpectations();
