@@ -13,19 +13,19 @@ public class TestEmployee {
 	private Employee employee = new Employee();
 	
 	@Test
-	public void shouldGetEngineerSalary() throws Exception {
+	public void shouldGetEngineerSalary() {
 		BigDecimal salary = new BigDecimal(100.00);
 		assertEquals(salary, employee.getPaymentAmount(EmployeeType.ENGINEER));
 	}
 	
 	@Test
-	public void shouldGetSalesmanSalary() throws Exception {
+	public void shouldGetSalesmanSalary() {
 		BigDecimal salary = new BigDecimal(110.00);
 		assertEquals(salary, employee.getPaymentAmount(EmployeeType.SALESMAN));
 	}
 	
 	@Test
-	public void shouldGetManagerSalary() throws Exception {
+	public void shouldGetManagerSalary() {
 		BigDecimal salary = new BigDecimal(120.00);
 		assertEquals(salary, employee.getPaymentAmount(EmployeeType.MANAGER));
 	}
