@@ -13,7 +13,7 @@ public class TestAccount {
 	private List<Entry> entries = new ArrayList<Entry>();
 	
 	@Test
-	public void shouldGetMeasureFromEntry() throws Exception {
+	public void shouldGetMeasureFromEntry() {
 		Double expectedResult = 100.25;
 		
 		entries.add(new Entry(5, 100.25));
@@ -22,7 +22,7 @@ public class TestAccount {
 	}
 	
 	@Test
-	public void shouldGetMeasureTotalFromTwoEntries() throws Exception {
+	public void shouldGetMeasureTotalFromTwoEntries() {
 		Double expectedResult = 150.25;
 		
 		entries.add(new Entry(5, 100.25));
@@ -32,7 +32,7 @@ public class TestAccount {
 	}
 	
 	@Test
-	public void shouldGetZeroFromEntry() throws Exception {
+	public void shouldGetZeroFromEntry() {
 		Double expectedResult = 0.00;
 		
 		entries.add(new Entry(11, 100.25));
